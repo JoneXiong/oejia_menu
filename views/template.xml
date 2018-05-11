@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="secondary_menu" inherit_id="web.menu_secondary_submenu">
+        <xpath expr="//ul[@class='oe_secondary_submenu nav nav-pills nav-stacked']" position="attributes">
+            <attribute name="class">oe_secondary_submenu nav nav-pills nav-stacked hide_secondary</attribute>
+        </xpath>
+    </template>
+    <template id="secondary" inherit_id="web.menu_secondary">
+        <xpath expr="//div[@class='o_sub_menu_content']//div[@class='oe_secondary_menu_section']" position="inside">
+            <t t-if="menu['web_icon']">
+                <i t-att-class="menu['web_icon']"/>
+            </t>
+            <t t-if="not(menu['web_icon'])">
+                <i class="fa fa-circle-o"/>
+            </t>
+            <t t-if="menu.get('children') and menu['children']">
+                <span class="sb-m"/>
+            </t>
+        </xpath>
+    </template>
+    <template id="menu_link" inherit_id="web.menu_link">
+        <xpath expr="//a" position="inside">
+            <t t-if="menu.get('children') and menu['children']">
+                <span class="sb-m"/>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>

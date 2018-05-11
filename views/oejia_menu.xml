@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_backend" name="custom menu assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" href="/oejia_menu/static/src/less/style.less"/>
+
+            <script type="text/javascript" src="/oejia_menu/static/src/js/menu.js"></script>
+            <script type="text/javascript" src="/oejia_menu/static/src/js/ready_init.js"></script>
+        </xpath>
+    </template>
+
+</odoo>
