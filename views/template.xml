@@ -18,6 +18,11 @@
             </t>
         </xpath>
     </template>
+    <template id="secondary_class" inherit_id="web.menu_secondary">
+        <xpath expr="//div[@class='o_sub_menu_content']//div[@class='oe_secondary_menu_section']" position="attributes">
+            <attribute name="class">oe_secondary_menu_section open_menu</attribute>
+        </xpath>
+    </template>
     <template id="menu_link" inherit_id="web.menu_link">
         <xpath expr="//a" position="inside">
             <t t-if="menu.get('children') and menu['children']">

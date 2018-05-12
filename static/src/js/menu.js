@@ -13,6 +13,10 @@ odoo.define('web.backend_falcon_theme', function(require) {
             function(e) {
                 e.preventDefault(); // prevent the default action
                 e.stopPropagation(); // stop the click from bubbling
+                if(!$('body').hasClass('oe_leftbar_open')){
+                    $('.hide_secondary').hide();
+                    $('.oe_secondary_menu_section').removeClass('open_menu');
+                }
                 $('body').toggleClass('oe_leftbar_open');
             });
     });
