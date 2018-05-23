@@ -14,11 +14,13 @@ odoo.define('web.backend_oejia_theme', function(require) {
                 e.preventDefault(); // prevent the default action
                 e.stopPropagation(); // stop the click from bubbling
                 if(!$('body').hasClass('oe_leftbar_open')){
-                    $('.o_sub_menu_logo').hide()
+                    $('.o_sub_menu_logo').hide();
+                    $('.o_sub_menu_footer').hide();
                     $('.hide_secondary').hide();
                     $('.oe_secondary_menu_section').removeClass('open_menu');
                 }else{
                     $('.o_sub_menu_logo').show();
+                    $('.o_sub_menu_footer').show();
                 }
                 $('body').toggleClass('oe_leftbar_open');
             });
