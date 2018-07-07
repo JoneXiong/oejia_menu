@@ -9,4 +9,4 @@ Odoo 菜单美化主题
 # 效果
 ![info](https://github.com/JoneXiong/oejia_menu/raw/master/static/description/1.png)
 
-![info](https://github.com/JoneXiong/oejia_menu/raw/master/static/description/1.png)
+![info](https://github.com/JoneXiong/oejia_menu/raw/master/static/description/2.png)
