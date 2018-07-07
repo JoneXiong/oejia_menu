@@ -7,6 +7,6 @@ Odoo 菜单美化主题
 - 支持 icon 图标，可以在odoo菜单页设置图片样式名 如“fa fa-circle-o
 
 # 效果
-![info](https://github.com/JoneXiong/oejia_wx/raw/master/static/description/1.png)
+![info](https://github.com/JoneXiong/oejia_menu/raw/master/static/description/1.png)
 
-![info](https://github.com/JoneXiong/oejia_wx/raw/master/static/description/1.png)
+![info](https://github.com/JoneXiong/oejia_menu/raw/master/static/description/1.png)
