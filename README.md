@@ -10,3 +10,9 @@ Odoo 菜单美化主题
 ![info](https://github.com/JoneXiong/oejia_menu/raw/master/static/description/1.png)
 
 ![info](https://github.com/JoneXiong/oejia_menu/raw/master/static/description/2.png)
+
+## 交流
+
+技术分享 http://www.oejia.net/
+
+Odoo-OpenERP扩展开发群: 260160505
