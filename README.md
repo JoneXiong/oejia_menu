@@ -11,6 +11,8 @@ Odoo 菜单美化主题
 
 ![info](https://github.com/JoneXiong/oejia_menu/raw/master/static/description/2.png)
 
+![info](https://github.com/JoneXiong/oejia_menu/raw/master/static/description/3.png)
+
 ## 说明
 Odoo11中要支持子菜单显示icon图标请做如下修改
 ```
