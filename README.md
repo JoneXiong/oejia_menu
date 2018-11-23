@@ -37,7 +37,7 @@ if 1:
 
 技术分享 http://www.oejia.net/
 
-Odoo-OpenERP扩展开发群: 260160505 （暗号：odoo_menu）
+Odoo-OpenERP扩展开发群: 260160505 （验证信息请输入：odoo_menu）
 
 关注官方公众号：
 
