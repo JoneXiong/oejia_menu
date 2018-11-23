@@ -6,6 +6,12 @@ Odoo 菜单美化主题
 - 支持 odoo 10、11
 - 支持 icon 图标，可以在odoo菜单页设置图片样式名 如“fa fa-circle-o
 
+
+## 在线 Demo
+关注下方测试公众号，访问 http://kf.calluu.cn/ 点“微信登录”扫码即可进入系统
+![info](http://oejia.net/files/201811/23151148085.jpeg)
+
+
 ## 效果
 
 ![info](https://github.com/JoneXiong/oejia_menu/raw/master/static/description/3.png)
