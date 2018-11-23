@@ -40,4 +40,5 @@ if 1:
 Odoo-OpenERP扩展开发群: 260160505
 
 关注官方公众号：
+
 ![info](http://oejia.net/static/img/oejia_gzh.jpg)
