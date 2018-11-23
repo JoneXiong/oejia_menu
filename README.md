@@ -38,3 +38,7 @@ if 1:
 技术分享 http://www.oejia.net/
 
 Odoo-OpenERP扩展开发群: 260160505
+
+关注官方公众号：
+
+http://oejia.net/static/img/oejia_gzh.jpg
