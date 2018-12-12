@@ -1,5 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+
+    <template id="web.menu">
+        <ul class="nav navbar-nav navbar-left oe_application_menu_placeholder" style="display: none;">
+            <li t-foreach="menu_data['children']" t-as="menu">
+                <t t-call="web.menu_link"/>
+            </li>
+            <li id="menu_more_container" class="dropdown" style="display: none;">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
+                <ul id="menu_more" class="dropdown-menu"></ul>
+            </li>
+        </ul>
+
+    </template>
+    <template id="web.menu_secondary">
+        <a class="o_sub_menu_logo" t-att-href="'/web/?debug' if debug else '/web'">
+            <span class="oe_logo_edit">Edit Company data</span>
+            <img src='/web/binary/company_logo'/>
+        </a>
+        <div class="o_sub_menu_content">
+            <t t-foreach="menu_data['children']" t-as="menu">
+                <div style="display: none" class="oe_secondary_menu" t-att-data-menu-parent="menu['id']">
+                    <t t-foreach="menu['children']" t-as="menu">
+                        <div class="oe_secondary_menu_section" t-att-data-menu-xmlid="menu.get('xmlid')">
+                            <t t-if="menu['children']"><t t-esc="menu['name']"/></t>
+                            <t t-if="not menu['children']"><t t-call="web.menu_link"/></t>
+                        </div>
+                        <t t-call="web.menu_secondary_submenu"/>
+                    </t>
+                </div>
+            </t>
+        </div>
+        <div class="o_sub_menu_footer">
+            Powered by <a href="http://www.odoo.com" target="_blank"><span>Odoo</span></a>
+        </div>
+    </template>
+    <template id="web.menu_secondary_submenu">
+        <ul t-if="menu['children']" class="oe_secondary_submenu nav nav-pills nav-stacked">
+            <li t-foreach="menu['children']" t-as="menu">
+                <t t-call="web.menu_link"/>
+                <t t-call="web.menu_secondary_submenu"/>
+            </li>
+        </ul>
+    </template>
+    <template id="web.menu_link">
+        <t t-set="debug_param" t-value="'?&amp;debug=' if debug else ''"/>
+        <a t-att-href="'/web%s#menu_id=%s&amp;action=%s' % (debug_param, menu['id'], menu['action'] and menu['action'].split(',')[1] or '')"
+            t-att-class="'oe_menu_toggler' if menu.get('children') else 'oe_menu_leaf'"
+            t-att-data-menu="menu['id']"
+            t-att-data-menu-xmlid="menu.get('xmlid')"
+            t-att-data-action-model="menu['action'] and menu['action'].split(',')[0] or None"
+            t-att-data-action-id="menu['action'] and menu['action'].split(',')[1] or None">
+            <span class="oe_menu_text">
+                <t t-esc="menu['name']"/>
+            </span>
+        </a>
+    </template>
+
+    <template id="oejia_webclient" inherit_id="web.webclient_bootstrap">
+        <xpath expr="//div[@class='o_main']" position="before">
+          <header t-name="Menu">
+            <nav class="o_main_navbar">
+              <ul class="o_menu_apps">
+                <li>
+                  <a class="full" id="menu-toggle">
+                    <i class="fa fa-th-large"></i>
+                  </a>
+                </li>
+              </ul>
+              <t t-call="web.menu"/>
+              <ul id="o_menu_systray" class="o_menu_systray" role="menu"/>
+            </nav>
+          </header>
+        </xpath>
+        <xpath expr="//main[@class='o_main_content']" position="before">
+          <div class="o_sub_menu" groups="base.group_user,base.group_portal">
+            <t t-call="web.menu_secondary"/>
+          </div>
+        </xpath>
+    </template>
+
+
     <template id="secondary_menu" inherit_id="web.menu_secondary_submenu">
         <xpath expr="//ul[@class='oe_secondary_submenu nav nav-pills nav-stacked']" position="attributes">
             <attribute name="class">oe_secondary_submenu nav nav-pills nav-stacked hide_secondary</attribute>
