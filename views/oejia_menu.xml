@@ -6,7 +6,6 @@
             <link rel="stylesheet" href="/oejia_menu/static/src/less/navbar.less"/>
             <link rel="stylesheet" href="/oejia_menu/static/src/less/style.less"/>
 
-            <script type="text/javascript" src="/oejia_menu/static/src/js/menu.js"></script>
             <script type="text/javascript" src="/oejia_menu/static/src/js/ready_init.js"></script>
         </xpath>
     </template>
