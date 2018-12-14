@@ -3,6 +3,7 @@
     <template id="assets_backend" name="custom menu assets" inherit_id="web.assets_backend">
         <xpath expr="." position="inside">
             <link rel="stylesheet" href="/oejia_menu/static/src/less/variables.less"/>
+            <link rel="stylesheet" href="/oejia_menu/static/src/less/menu.less"/>
             <link rel="stylesheet" href="/oejia_menu/static/src/less/navbar.less"/>
             <link rel="stylesheet" href="/oejia_menu/static/src/less/style.less"/>
 
