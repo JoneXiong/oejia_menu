@@ -68,12 +68,18 @@ var Menu = Widget.extend({
     },
 
 	action_id_to_primary_menu_id: function (action_id) {
-        var $menu = this.$el.add(this.$secondary_menus).find('a[data-action-id="' + id + '"]');
+        var $menu = this.$el.add(this.$secondary_menus).find('a[data-action-id="' + action_id + '"]');
         return $menu.data('menu');
 	},
     menu_id_to_action_id: function (menu_id, root) {
-         var $menu = this.$el.add(this.$secondary_menus).find('a[data-menu="' + menu_id + '"]');
-        return $menu.data('action-id');
+	var $item = this.$el.add(this.$secondary_menus).find('a[data-menu="' + menu_id + '"]');
+	var action_id = $item.data('action-id');
+	if(!action_id){
+	    var $sub_menu = this.$secondary_menus.find('.oe_secondary_menu[data-menu-parent=' + menu_id + ']');
+	    var $items = $sub_menu.find('a[data-action-id]').filter('[data-action-id!=""]');
+	    action_id = $items.data('action-id');
+	}
+	return action_id;//$menu.data('action-id');
     },
     openFirstApp: function () {
         var first_menu_id = this.$el.find("a:first").data("menu");
