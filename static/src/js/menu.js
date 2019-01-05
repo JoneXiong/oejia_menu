@@ -46,7 +46,7 @@ var Menu = Widget.extend({
         var lazyreflow = _.debounce(this.reflow.bind(this), 200);
         core.bus.on('resize', this, function() {
             if ($(window).width() < 768 ) {
-                lazyreflow('all_outside');
+                lazyreflow();
             } else {
                 lazyreflow();
             }
@@ -106,7 +106,7 @@ var Menu = Widget.extend({
         }
 
         // Hide all menu items
-        var $toplevel_items = this.$el.find('li').not($more_container).not($systray.find('li')).hide();
+        var $toplevel_items = this.$el.find('li').not($more_container).not($systray.find('li')).hide().removeClass('dropdown-item');
         // Show list of menu items (which is empty for now since all menu items are hidden)
         self.$el.show();
         $toplevel_items.each(function() {
@@ -120,7 +120,7 @@ var Menu = Widget.extend({
             }
             $(this).show(); // show the current item in menu bar
         });
-        $more.append($toplevel_items.filter(':hidden').show());
+        $more.append($toplevel_items.filter(':hidden').show().addClass('dropdown-item'));
         $more_container.toggle(!!$more.children().length);
         // Hide toplevel item if there is only one
         var $toplevel = self.$el.children("li:visible");
