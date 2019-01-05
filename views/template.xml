@@ -14,7 +14,7 @@
 
     </template>
     <template id="oejia_menu.menu_secondary">
-        <a class="o_sub_menu_logo" t-att-href="'/web/?debug' if debug else '/web'">
+        <a class="o_sub_menu_logo toggler_show" t-att-href="'/web/?debug' if debug else '/web'">
             <span class="oe_logo_edit">Edit Company data</span>
             <img src='/web/binary/company_logo'/>
         </a>
@@ -40,7 +40,7 @@
                 </div>
             </t>
         </div>
-        <div class="o_sub_menu_footer">
+        <div class="o_sub_menu_footer toggler_show">
             Powered by <a href="http://www.odoo.com" target="_blank"><span>Odoo</span></a>
         </div>
     </template>

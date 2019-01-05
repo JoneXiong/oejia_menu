@@ -237,7 +237,21 @@
 .o_content .o_mail_chat .o_mail_chat_content .o_chat_composer {
   background: #fff2ee;
 }
+    .o_web_client .o_main .o_sub_menu .o_sub_menu_logo{
+      display: none;
+    }
+    .o_web_client .o_main .o_sub_menu .o_sub_menu_footer{
+      display: none;
+    }
 @media (max-width: 767px) {
+  .o_web_client .o_main .o_sub_menu {
+    flex: 0 0 100%;
+  }
+  .o_web_client.oe_leftbar_open .o_main .o_sub_menu {
+    flex: 0 0 0px;
+    max-width: 0px;
+  }
+
   .o_content .o_mail_chat .o_mail_annoying_notification_bar {
     padding: 10px;
     line-height: normal;
@@ -255,6 +269,9 @@
     flex: 0 0 60px;
     width: 60px;
     max-width: 60px;
+  }
+  .o_web_client .o_main .o_sub_menu .toggler_show {
+    display: block;
   }
   .o_web_client.oe_leftbar_open .o_main .o_sub_menu .o_sub_menu_content {
     overflow: inherit;
