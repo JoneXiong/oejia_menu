@@ -4,10 +4,6 @@
 
     'summary': """Oejia Menu Theme""",
 
-    'description': """
-        Oejia Menu Theme
-    """,
-
     'author': "Oejia",
     'website': "http://www.oejia.net",
 
