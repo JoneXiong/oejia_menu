@@ -33,7 +33,7 @@ var Menu = Widget.extend({
         this.$el.on('click', 'a[data-menu]', function (event) {
             event.preventDefault();
             var menu_id = $(event.currentTarget).data('menu');
-            core.bus.trigger('change_menu_section', menu_id);
+            self.menu_click(menu_id)
         });
 
         // Hide second level submenus
