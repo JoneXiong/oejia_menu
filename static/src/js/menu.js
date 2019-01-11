@@ -236,8 +236,7 @@ var Menu = Widget.extend({
      * @param {int} [menu_id] the top menu id
      */
     on_change_top_menu: function(menu_id) {
-        var self = this;
-        this.menu_click(menu_id);
+        this.open_menu(menu_id);
     },
     on_menu_click: function(ev) {
         ev.preventDefault();

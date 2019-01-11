@@ -14,7 +14,7 @@ WebClient.include({
         var self = this;       
         return session.session_reload().then(function () {
             session.load_modules(true).then(function(){
-                self.menu.proxy('do_reload');self.menu0.proxy('do_reload')
+                self.menu.proxy('do_reload');
 			});  
         });                    
     },
