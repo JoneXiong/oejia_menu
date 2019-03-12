@@ -6,7 +6,7 @@ Odoo 菜单美化主题
 - 支持 odoo 10、11 (12已支持，见12.0分支)
 - 支持 icon 图标，可以在odoo菜单页设置图片样式名 如“fa fa-circle-o
 
-参考资料: [常见问题处理](http://oejia.net/blog/2018/12/21/oejia_weshop_qa.html)
+参考资料: [常见问题处理](http://oejia.net/blog/2019/03/08/oejia_menu_qa.html)
 
 ## 在线 Demo
 
